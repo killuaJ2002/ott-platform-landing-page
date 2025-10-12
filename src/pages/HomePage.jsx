@@ -11,7 +11,7 @@ const HomePage = () => {
         />
       </div>
       <div className="absolute inset-0 bg-white/20"></div>
-      <div className="relative z-10 p-6 w-full h-full flex flex-col">
+      <div className="relative z-10 lg:p-4 2xl:p-6 w-full h-full flex flex-col">
         <Navbar />
       </div>
     </div>
