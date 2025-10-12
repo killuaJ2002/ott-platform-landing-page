@@ -2,7 +2,7 @@ import { ListFilter } from "lucide-react";
 import SearchBox from "./SearchBox";
 const Navbar = () => {
   return (
-    <div className="bg-transparent flex flex-col justify-between lg:gap-6 2xl:gap-7">
+    <div className="bg-transparent flex flex-col justify-between lg:gap-6 2xl:gap-7 mb-5">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h2 className="text-mainWhite lg:text-3xl 2xl:text-4xl">
