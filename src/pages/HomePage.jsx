@@ -1,6 +1,7 @@
 import animeBg from "../assets/images/anime-bg.jpg";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Suggestions from "../components/Suggestions";
 const HomePage = () => {
   return (
     <div className="relative h-screen overflow-hidden">
@@ -15,6 +16,7 @@ const HomePage = () => {
       <div className="relative z-10 lg:p-4 2xl:p-6 w-full h-full flex flex-col">
         <Navbar />
         <Hero />
+        <Suggestions />
       </div>
     </div>
   );
