@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import SuggestionCard from "./SuggestionCard";
+import { ChevronLeft } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 const Suggestions = () => {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -40,29 +42,29 @@ const Suggestions = () => {
   return (
     <div className="flex-1 bg-trasparent flex flex-col gap-4">
       <h2 className="text-mainWhite text-2xl">Suggested for you</h2>
-      <div className="w-full h-full bg-yellow-400 relative">
+      <div className="w-full h-full bg-transparent relative">
         <div
-          className="flex gap-2 overflow-x-hidden scroll-smooth w-full h-full"
+          className="flex gap-6 overflow-x-hidden scroll-smooth w-full h-full"
           ref={scrollContainerRef}
         >
           {Array.from({ length: 20 }, (_, i) => (
-            <SuggestionCard key={i} number={i + 1} />
+            <SuggestionCard key={i} />
           ))}
         </div>
         {!isAtStart && (
           <button
             onClick={() => handleLeftClick()}
-            className="absolute left-0 top-1/2"
+            className="absolute left-0 top-1/2 text-mainWhite"
           >
-            left arrow
+            <ChevronLeft />
           </button>
         )}
         {!isAtEnd && (
           <button
             onClick={() => handleRightClick()}
-            className="absolute right-0 top-1/2"
+            className="absolute right-0 top-1/2 text-mainWhite"
           >
-            right arrow
+            <ChevronRight />
           </button>
         )}
       </div>
