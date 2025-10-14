@@ -128,11 +128,13 @@ const Suggestions = () => {
   ];
 
   return (
-    <div className="flex-1 bg-trasparent flex flex-col gap-4">
-      <h2 className="text-mainWhite text-2xl">Suggested for you</h2>
+    <div className="flex-1 bg-trasparent flex flex-col lg:gap-3 2xl:gap-4">
+      <h2 className="text-mainWhite lg:text-xl 2xl:text-2xl">
+        Suggested for you
+      </h2>
       <div className="w-full h-full bg-transparent relative">
         <div
-          className="flex gap-6 overflow-x-hidden scroll-smooth w-full h-full"
+          className="flex lg:gap-4 2xl:gap-6 overflow-x-hidden scroll-smooth w-full h-full"
           ref={scrollContainerRef}
         >
           {suggestedAnime.map((anime) => (
@@ -148,7 +150,7 @@ const Suggestions = () => {
             onClick={() => handleLeftClick()}
             className="absolute left-0 top-0 text-mainWhite h-full"
           >
-            <ChevronLeft className="w-10 h-10" />
+            <ChevronLeft className="lg:w-8 lg:h-8 2xl:w-10 2xl:h-10" />
           </button>
         )}
         {!isAtEnd && (
@@ -156,7 +158,7 @@ const Suggestions = () => {
             onClick={() => handleRightClick()}
             className="absolute right-0 top-0 text-mainWhite h-full"
           >
-            <ChevronRight className="w-10 h-10" />
+            <ChevronRight className="lg:w-8 lg:h-8 2xl:w-10 2xl:h-10" />
           </button>
         )}
       </div>
