@@ -8,6 +8,12 @@ import gachiakuta from "../assets/images/gachiakuta.jpg";
 import spyXfamily from "../assets/images/spyxfamily.jpeg";
 import drStone from "../assets/images/drStone.jpg";
 import yourName from "../assets/images/kimiNoNawa.png";
+import hxh from "../assets/images/hunterxhunter.jpg";
+import dn from "../assets/images/dn.jpg";
+import sl from "../assets/images/sl.jpg";
+import aot from "../assets/images/aot.jpg";
+import konosuba from "../assets/images/konosuba.png";
+import ff from "../assets/images/fireForce.jpeg";
 const Suggestions = () => {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -63,12 +69,36 @@ const Suggestions = () => {
       image: gachiakuta,
     },
     {
-      title: "SpyxFamily",
+      title: "Spy x Family",
       image: spyXfamily,
     },
     {
       title: "Dr Stone",
       image: drStone,
+    },
+    {
+      title: "Hunter x Hunter",
+      image: hxh,
+    },
+    {
+      title: "Death Note",
+      image: dn,
+    },
+    {
+      title: "Solo Levelling",
+      image: sl,
+    },
+    {
+      title: "Attack On Titan",
+      image: aot,
+    },
+    {
+      title: "Konosuba",
+      image: konosuba,
+    },
+    {
+      title: "Fire Force",
+      image: ff,
     },
   ];
 
