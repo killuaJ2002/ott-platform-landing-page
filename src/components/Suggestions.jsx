@@ -14,6 +14,11 @@ import sl from "../assets/images/sl.jpg";
 import aot from "../assets/images/aot.jpg";
 import konosuba from "../assets/images/konosuba.png";
 import ff from "../assets/images/fireForce.jpeg";
+import csm from "../assets/images/csm.jpg";
+import naruto from "../assets/images/naruto.png";
+import haikyuu from "../assets/images/haikyuu.jpg";
+import hni from "../assets/images/hajimeNoIppo.jpg";
+import cb from "../assets/images/cowboyBebop.png";
 const Suggestions = () => {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -99,6 +104,26 @@ const Suggestions = () => {
     {
       title: "Fire Force",
       image: ff,
+    },
+    {
+      title: "Chainsaw Man",
+      image: csm,
+    },
+    {
+      title: "Naruto",
+      image: naruto,
+    },
+    {
+      title: "Haikyuu",
+      image: haikyuu,
+    },
+    {
+      title: "Hajime No Ippo",
+      image: hni,
+    },
+    {
+      title: "Cowboy Bebop",
+      image: cb,
     },
   ];
 
