@@ -54,7 +54,7 @@ const Suggestions = () => {
         {!isAtStart && (
           <button
             onClick={() => handleLeftClick()}
-            className="absolute left-0 top-0 text-mainWhite h-full bg-gradient-to-r from-black/50 to-transparent"
+            className="absolute left-0 top-0 text-mainWhite h-full"
           >
             <ChevronLeft className="w-10 h-10" />
           </button>
@@ -62,7 +62,7 @@ const Suggestions = () => {
         {!isAtEnd && (
           <button
             onClick={() => handleRightClick()}
-            className="absolute right-0 top-0 text-mainWhite h-full bg-gradient-to-r from-transparent to-black/50"
+            className="absolute right-0 top-0 text-mainWhite h-full"
           >
             <ChevronRight className="w-10 h-10" />
           </button>
