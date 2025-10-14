@@ -54,17 +54,17 @@ const Suggestions = () => {
         {!isAtStart && (
           <button
             onClick={() => handleLeftClick()}
-            className="absolute left-0 top-1/2 text-mainWhite"
+            className="absolute left-0 top-0 text-mainWhite h-full bg-gradient-to-r from-black/50 to-transparent"
           >
-            <ChevronLeft />
+            <ChevronLeft className="w-10 h-10" />
           </button>
         )}
         {!isAtEnd && (
           <button
             onClick={() => handleRightClick()}
-            className="absolute right-0 top-1/2 text-mainWhite"
+            className="absolute right-0 top-0 text-mainWhite h-full bg-gradient-to-r from-transparent to-black/50"
           >
-            <ChevronRight />
+            <ChevronRight className="w-10 h-10" />
           </button>
         )}
       </div>
