@@ -2,6 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import SuggestionCard from "./SuggestionCard";
 import { ChevronLeft } from "lucide-react";
 import { ChevronRight } from "lucide-react";
+import mha from "../assets/images/mha.png";
+import opm from "../assets/images/opm.jpg";
+import gachiakuta from "../assets/images/gachiakuta.jpg";
+import spyXfamily from "../assets/images/spyxfamily.jpeg";
+import drStone from "../assets/images/drStone.jpg";
+import yourName from "../assets/images/kimiNoNawa.png";
 const Suggestions = () => {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -39,6 +45,33 @@ const Suggestions = () => {
     return () => el.removeEventListener("scroll", checkScrollPosition);
   }, []);
 
+  const suggestedAnime = [
+    {
+      title: "Your Name",
+      image: yourName,
+    },
+    {
+      title: "My Hero Academia",
+      image: mha,
+    },
+    {
+      title: "One Punch Man",
+      image: opm,
+    },
+    {
+      title: "Gachiakuta",
+      image: gachiakuta,
+    },
+    {
+      title: "SpyxFamily",
+      image: spyXfamily,
+    },
+    {
+      title: "Dr Stone",
+      image: drStone,
+    },
+  ];
+
   return (
     <div className="flex-1 bg-trasparent flex flex-col gap-4">
       <h2 className="text-mainWhite text-2xl">Suggested for you</h2>
@@ -47,8 +80,12 @@ const Suggestions = () => {
           className="flex gap-6 overflow-x-hidden scroll-smooth w-full h-full"
           ref={scrollContainerRef}
         >
-          {Array.from({ length: 20 }, (_, i) => (
-            <SuggestionCard key={i} />
+          {suggestedAnime.map((anime) => (
+            <SuggestionCard
+              key={anime.title}
+              title={anime.title}
+              image={anime.image}
+            />
           ))}
         </div>
         {!isAtStart && (
