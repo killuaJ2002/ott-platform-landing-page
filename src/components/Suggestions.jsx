@@ -34,17 +34,15 @@ const Suggestions = () => {
   };
 
   const handleLeftClick = () => {
-    scrollContainerRef.current.scrollBy({
-      left: -500, // move left
-      behavior: "smooth",
-    });
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.5; // 80% of visible width
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
   };
 
   const handleRightClick = () => {
-    scrollContainerRef.current.scrollBy({
-      left: 500, // move right
-      behavior: "smooth",
-    });
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.5;
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -128,13 +126,13 @@ const Suggestions = () => {
   ];
 
   return (
-    <div className="flex-1 bg-trasparent flex flex-col lg:gap-3 2xl:gap-4">
+    <div className="flex-1 bg-trasparent flex flex-col gap-3 2xl:gap-4">
       <h2 className="text-mainWhite lg:text-xl 2xl:text-2xl">
         Suggested for you
       </h2>
       <div className="w-full h-full bg-transparent relative">
         <div
-          className="flex lg:gap-4 2xl:gap-6 overflow-x-hidden scroll-smooth w-full h-full"
+          className="flex gap-2 lg:gap-4 2xl:gap-6 overflow-x-hidden scroll-smooth w-full h-full"
           ref={scrollContainerRef}
         >
           {suggestedAnime.map((anime) => (

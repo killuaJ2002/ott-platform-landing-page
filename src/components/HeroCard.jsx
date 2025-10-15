@@ -10,7 +10,7 @@ const HeroCard = ({ image, title, genre }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
       </div>
-      <div className="absolute bottom-0 left-0 h-1/2 w-full z-10 p-2 lg:p-4 2xl:p-6 flex flex-col items-start justify-between">
+      <div className="absolute bottom-0 left-0 h-1/2 w-full z-10 p-3 lg:p-4 2xl:p-6 flex flex-col items-start justify-between">
         <div className="flex flex-col">
           <h1 className="text-mainWhite text-2xl lg:text-5xl 2xl:text-6xl lg:font-semibold">
             {title}
