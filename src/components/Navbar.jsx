@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h2 className="text-mainWhite lg:text-3xl 2xl:text-4xl">
-            Good Morning, Kalpa
+            Good Morning, KJ
           </h2>
           <p className="text-mainWhite lg:text-sm 2xl:text-base font-light">
             25+ new ongoing anime for you

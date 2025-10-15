@@ -1,7 +1,7 @@
 import { Play, Star } from "lucide-react";
 const HeroCard = ({ image, title, genre }) => {
   return (
-    <div className="relative lg:rounded-xl 2xl:rounded-2xl w-full h-full overflow-hidden">
+    <div className="relative rounded w-full h-full overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={image}
