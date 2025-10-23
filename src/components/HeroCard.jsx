@@ -1,12 +1,16 @@
 import { Play, Star } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const HeroCard = ({ image, title, genre }) => {
   return (
     <div className="relative rounded w-full h-full overflow-hidden">
       <div className="absolute inset-0">
-        <img
+        <LazyLoadImage
           src={image}
-          alt="anime-banner"
-          className="h-full w-full object-cover"
+          alt="hero-card-image"
+          effect="blur" // other options: "opacity", "black-and-white"
+          placeholderSrc="/tiny-blur.jpg" // optional low-res preview
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
       </div>
