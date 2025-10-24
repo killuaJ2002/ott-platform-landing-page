@@ -12,7 +12,7 @@ const SuggestionCard = ({ title, image }) => {
           className="w-full h-full object-cover object-center"
         />
       </div>
-      <div>
+      <div className="border-b border-mainLightWhite pb-2">
         <h3 className="text-sm lg:text-base text-mainWhite">{title}</h3>
         <p className="text-xs lg:text-sm font-light text-white/70">Sub | Dub</p>
       </div>
